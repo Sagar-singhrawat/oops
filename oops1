@@ -1,0 +1,39 @@
+//Q1 --display the user name with total electric bill charges according to units consumed//
+
+#include<iostream>
+
+using namespace std;
+int main(){
+    string name;
+    cout<<"enter the user name :"<<endl;
+    cin>>name;
+    int charges;
+    int unit;
+    cout<<"enter the units consumed:"<<endl;
+    cin>>unit;
+    if(unit<=100){
+        charges=unit*6;
+    }
+    else if(unit<=300){
+         int unit1=100*0.6;
+         int units2=(unit-100)*0.8;
+         charges=unit1+units2;
+    }
+    else{
+        int unit1=100*0.6;
+         int units2=(200)*0.8;
+         int units3=(unit-300)*0.9;
+         charges=unit1+units2+units3;
+
+
+    }
+    int totalcharges=0;
+    totalcharges=charges+50;
+    if(totalcharges>300){
+        totalcharges=totalcharges+(totalcharges*0.15);
+    }
+    cout<<"user name :->"<< name<<endl;
+    cout<<"units consumed:-> "<<unit<<endl;
+    cout<<"totalcharges:->"<<totalcharges<<endl;
+
+}
